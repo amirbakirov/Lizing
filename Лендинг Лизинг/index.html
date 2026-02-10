@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лизинговые споры и сальдо | Юридическая фирма «Гранд»</title>
+    <meta name="description" content="Профессиональная защита прав лизингополучателей. Возврат лизинговых платежей, расторжение договора, снижение неустоек. Юридическая фирма Гранд.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="https://urgrand.ru" class="header__logo">
+                <img src="images/Лого строка 2.png" alt="GRANDLEGAL — Юридическая фирма Гранд" class="header__logo-img">
+            </a>
+            <nav class="header__nav">
+                <a href="#hero" class="header__link">ГЛАВНАЯ</a>
+                <a href="#about" class="header__link">ОБ УСЛУГЕ</a>
+                <a href="#calculator" class="header__link">КАЛЬКУЛЯТОР</a>
+                <a href="#services" class="header__link">УСЛУГИ</a>
+                <a href="#faq" class="header__link">FAQ</a>
+                <a href="#contacts" class="header__link">КОНТАКТЫ</a>
+            </nav>
+            <a href="#contacts" class="btn btn--header">Связаться с нами</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero__bg">
+            <img src="images/background.jpeg" alt="" class="hero__bg-img">
+            <div class="hero__overlay"></div>
+        </div>
+        <div class="container hero__container">
+            <div class="hero__content">
+                <div class="hero__badge">
+                    <span class="hero__badge-icon"></span>
+                    <span>ЦЕНТР ЛИЗИНГОВЫХ СПОРОВ</span>
+                </div>
+                <h1 class="hero__title">ЦЕНТР ЛИЗИНГОВЫХ СПОРОВ</h1>
+                <ul class="hero__benefits">
+                    <li><span class="hero__check"></span>Профессионально защищаем права лизингополучателей</li>
+                    <li><span class="hero__check"></span>Выигрываем суды против крупнейших лизинговых компаний</li>
+                    <li><span class="hero__check"></span>Обобщаем и анализируем все лизинговые споры в стране</li>
+                </ul>
+                <div class="hero__phones">
+                    <a href="tel:+79063211157" class="hero__phone">+7 (906) 321-11-57</a>
+                    <span class="hero__phones-divider">|</span>
+                    <a href="mailto:info@urgrand.ru" class="hero__phone">info@urgrand.ru</a>
+                </div>
+                <div class="hero__cta">
+                    <a href="#contacts" class="btn btn--primary">Оценить риски</a>
+                    <a href="https://wa.me/79063211157" target="_blank" rel="noopener" class="btn btn--secondary">Написать в WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">О компании</h2>
+            <p class="about__lead"><strong>Центр лизинговых споров</strong> – специализированная юридическая компания, которая совмещает практическую защиту прав лизингополучателей с научными исследованиями в области правового регулирования лизинга в России.</p>
+            <p class="about__text">Миссия Центра – эффективно защищать интересы лизингополучателей, опираясь на глубокую аналитику и экспертизу. Мы непрерывно исследуем тренды лизинговых споров, систематизируем судебную практику, анализируем стратегии и приемы лизинговых компаний.</p>
+            <div class="about__specialization">
+                <h3 class="about__specialization-title">Основная специализация — защита компаний реального сектора экономики:</h3>
+                <p class="about__specialization-list">Строительство. Производство. Транспорт. Сельское хозяйство.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator -->
+    <section class="calc" id="calculator">
+        <div class="container">
+            <h2 class="section-title section-title--underline">Калькулятор сальдо взаимных расчётов</h2>
+            <p class="calc__intro">Заполните данные по договору лизинга. Результат расчёта — ориентировочное сальдо взаимных расчётов (доходы лизингодателя минус его расходы). Отрицательное значение означает переплату лизингополучателя.</p>
+            <div class="calc__layout">
+                <div class="calc__inputs">
+                    <p class="calc__inputs-note">Заполните поля на сайте</p>
+                    <div class="calc__field">
+                        <label class="calc__label">Цена приобретения имущества, руб.</label>
+                        <input type="number" id="calc-price" class="calc__input" placeholder="6 600 000" min="0" step="0.01" data-input>
+                    </div>
+                    <div class="calc__field">
+                        <label class="calc__label">Сумма аванса по договору лизинга, руб.</label>
+                        <input type="number" id="calc-advance" class="calc__input" placeholder="0" min="0" step="0.01" value="0" data-input>
+                    </div>
+                    <div class="calc__field">
+                        <label class="calc__label">Общая сумма договора лизинга, руб.</label>
+                        <input type="number" id="calc-total" class="calc__input" placeholder="9 235 860" min="0" step="0.01" data-input>
+                    </div>
+                    <div class="calc__field">
+                        <label class="calc__label">Платежи по договору лизинга, руб.</label>
+                        <input type="number" id="calc-payments" class="calc__input" placeholder="1 884 158,73" min="0" step="0.01" data-input>
+                    </div>
+                    <div class="calc__field">
+                        <label class="calc__label">Цена реализации имущества (оценка), руб.</label>
+                        <input type="number" id="calc-realization" class="calc__input" placeholder="1 900 000" min="0" step="0.01" data-input>
+                    </div>
+                    <div class="calc__field">
+                        <label class="calc__label">Прочие расходы лизингодателя, руб. <span class="calc__optional">(необяз.)</span></label>
+                        <input type="number" id="calc-extra" class="calc__input" placeholder="0" min="0" step="0.01" value="0" data-input>
+                    </div>
+                    <div class="calc__row calc__row--dates">
+                        <div class="calc__field">
+                            <label class="calc__label">Дата начала договора</label>
+                            <input type="date" id="calc-date-start" class="calc__input" data-input>
+                        </div>
+                        <div class="calc__field">
+                            <label class="calc__label">Дата окончания договора</label>
+                            <input type="date" id="calc-date-end" class="calc__input" data-input>
+                        </div>
+                        <div class="calc__field">
+                            <label class="calc__label">Дата изъятия</label>
+                            <input type="date" id="calc-date-seizure" class="calc__input" data-input>
+                        </div>
+                    </div>
+                </div>
+                <div class="calc__result-wrap">
+                    <p class="calc__result-note">Результат расчёта</p>
+                    <div class="calc__result" id="calc-result">
+                        <span class="calc__result-label">Сальдо взаимных расчётов (Доходы − расходы), руб.</span>
+                        <span class="calc__result-value" id="calc-result-value">—</span>
+                    </div>
+                    <button type="button" class="btn btn--primary calc__btn" id="calc-submit">Рассчитать</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services__header">
+                <h2 class="section-title section-title--underline">Профессиональная поддержка в лизинговых спорах</h2>
+                <p class="services__subtitle">Наиболее востребованные и актуальные услуги Центра лизинговых споров</p>
+            </div>
+            <div class="services__grid">
+                <article class="service-card">
+                    <span class="service-card__num">01</span>
+                    <h3 class="service-card__title">Возврат лизинговых платежей (сальдо)</h3>
+                    <p class="service-card__text">Вернем уплаченный аванс и лизинговые платежи, уплаченные до расторжения договора лизинга. В максимальном размере. Оспорим необоснованные начисления лизинговой компании, в том числе "упущенную выгоду" или "сумму закрытия сделки".</p>
+                </article>
+                <article class="service-card">
+                    <span class="service-card__num">02</span>
+                    <h3 class="service-card__title">Расторжение договора и изъятие имущества</h3>
+                    <p class="service-card__text">Признаем незаконным расторжение договора лизинга со стороны лизинговой компании. Либо найдем основания для расторжения по инициативе лизингополучателя. Юридически верно оформим прекращение лизинговой сделки и изъятие имущества, чтобы минимизировать убытки.</p>
+                </article>
+                <article class="service-card">
+                    <span class="service-card__num">03</span>
+                    <h3 class="service-card__title">Споры о качестве лизингового имущества</h3>
+                    <p class="service-card__text">Поможем расторгнуть договор лизинга и купли-продажи в связи с недостатками лизингового имущества или просрочкой поставки. Взыщем с лизинговой компании уплаченный аванс и лизинговые платежи. Возместим упущенную выгоду в связи с расторжением сделки.</p>
+                </article>
+                <article class="service-card">
+                    <span class="service-card__num">04</span>
+                    <h3 class="service-card__title">Неустойки по договору лизинга</h3>
+                    <p class="service-card__text">Оспорим и существенно снизим все неустойки и штрафные санкции по договору лизинга. В случае, если пени и штрафы уже уплачены лизингодателю, то в судебном порядке "задним числом" добьемся их снижения до разумных пределов и взыщем разницу.</p>
+                </article>
+                <article class="service-card">
+                    <span class="service-card__num">05</span>
+                    <h3 class="service-card__title">Судебная защита против лизинговых компаний</h3>
+                    <p class="service-card__text">Выстроим эффективную стратегию и представим интересы в суде против любых требований лизинговых компаний. Опираемся на правовые позиции Верховного суда Российской Федерации и обширную судебную практику по таким делам.</p>
+                </article>
+                <article class="service-card">
+                    <span class="service-card__num">06</span>
+                    <h3 class="service-card__title">Аудит лизинговой документации</h3>
+                    <p class="service-card__text">Перед лизинговой сделкой тщательно проверим все условия договора, выявим скрытые риски лизингополучателя, исключим несправедливые договорные условия и заложим фундамент для защиты в возможном споре в будущем.</p>
+                </article>
+                <article class="service-card">
+                    <span class="service-card__num">07</span>
+                    <h3 class="service-card__title">Взыскание убытков с лизинговой компании</h3>
+                    <p class="service-card__text">Привлечем лизингодателя к ответственности за любые нарушения договора, возместим убытки лизингополучателя на заключение "замещающей сделки" и потребуем уплаты упущенной выгоды.</p>
+                </article>
+                <article class="service-card">
+                    <span class="service-card__num">08</span>
+                    <h3 class="service-card__title">Отказ в выкупе лизингового имущества</h3>
+                    <p class="service-card__text">Через суд или путем переговоров добьемся от лизинговой компании передачи прав собственности на предмет лизинга. Признаем в суде право собственности на предмет лизинга, оспорим его незаконное удержание.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title section-title--underline">Вопросы</h2>
+            <div class="faq__list">
+                <div class="faq__item" data-faq>
+                    <div class="faq__question">
+                        <span class="faq__num">01</span>
+                        <span class="faq__question-text">С чего начать работу с «Центром лизинговых споров» и как будет строиться взаимодействие?</span>
+                        <button type="button" class="faq__toggle" aria-label="Открыть ответ"></button>
+                    </div>
+                    <div class="faq__answer">
+                        <p>Обратитесь к нам любым способом: заполните форму «Связаться с нами», позвоните на любой номер телефона. Или напишите в WhatsApp. Далее мы проведем первый телефонный разговор и определим проблемы, также предложим варианты работы над проблемой и определим пути решения. После чего на основании имеющихся документов Центр лизинговых споров подготовит коммерческое предложение, где будут определены варианты разрешения спора и предложены условия оплаты. После заключения договора и оплаты мы приступим к работе по защите ваших прав и законных интересов.</p>
+                    </div>
+                </div>
+                <div class="faq__item" data-faq>
+                    <div class="faq__question">
+                        <span class="faq__num">02</span>
+                        <span class="faq__question-text">Работаете ли вы с физическими лицами или только с ООО и ИП?</span>
+                        <button type="button" class="faq__toggle" aria-label="Открыть ответ"></button>
+                    </div>
+                    <div class="faq__answer">
+                        <p>Мы работаем и с физическими, и с юридическими лицами (АО, ООО) и с индивидуальными предпринимателями (ИП). Среди наших клиентов много частных лиц (не являющихся ИП), которые, например, купили в лизинг легковые автомобили, но столкнулись с проблемами в отношениях с лизинговыми компаниями. Основная специализация Центра лизинговых споров – работа с транспортными, строительными, добывающими и производственными компаниями. Поэтому по заявкам частных клиентов (физических лиц) мы работаем преимущественно по взысканию сальдо с лизингодателя.</p>
+                    </div>
+                </div>
+                <div class="faq__item" data-faq>
+                    <div class="faq__question">
+                        <span class="faq__num">03</span>
+                        <span class="faq__question-text">Сколько времени обычно занимает и какие этапы включает в себя процесс рассмотрения лизингового спора?</span>
+                        <button type="button" class="faq__toggle" aria-label="Открыть ответ"></button>
+                    </div>
+                    <div class="faq__answer">
+                        <p>Обычно мы подключаемся к работе на стадии претензионного урегулирования спора. Она длится, в среднем, один месяц. Бывает, что на претензионной стадии удается договориться и заключить соглашение об урегулировании задолженности. Если такого не происходит, то мы ведем дело в суде. Срок рассмотрения дела в суде – от двух месяцев до года.</p>
+                    </div>
+                </div>
+                <div class="faq__item" data-faq>
+                    <div class="faq__question">
+                        <span class="faq__num">04</span>
+                        <span class="faq__question-text">Могу ли я узнать предварительную оценку перспектив моего лизингового спора?</span>
+                        <button type="button" class="faq__toggle" aria-label="Открыть ответ"></button>
+                    </div>
+                    <div class="faq__answer">
+                        <p>Да, на стадии предварительного знакомства и обмена документами мы определяем, на что объективно можно рассчитывать в данном споре, какие есть шансы, сколько получится отсудить (или наоборот, сберечь), если начать лизинговый спор. В зависимости от объема и имеющихся документов, мы предоставляем расчет требований, возможные риски и вероятности успеха. На основании такой информации сможете принять взвешенное решение с учетом всех обстоятельств.</p>
+                    </div>
+                </div>
+                <div class="faq__item" data-faq>
+                    <div class="faq__question">
+                        <span class="faq__num">05</span>
+                        <span class="faq__question-text">Как я буду информирован о ходе дела?</span>
+                        <button type="button" class="faq__toggle" aria-label="Открыть ответ"></button>
+                    </div>
+                    <div class="faq__answer">
+                        <p>У всех клиентов есть доступ ко всем материалам по рассматриваемому лизинговому спору, а также ко всем документам, подготовленным Центром лизинговых споров. Обо всех состоявшихся событиях по лизинговому спору и о его продвижении мы информируем клиента незамедлительно. А о планируемых (проведение экспертиз, участие в судебных заседаниях) – заблаговременно. По сложным и комплексным спорам мы проводим регулярные совещания с участием клиентов, где обсуждаем текущие вопросы по проекту и предоставляем отчет о текущей работе.</p>
+                    </div>
+                </div>
+                <div class="faq__item" data-faq>
+                    <div class="faq__question">
+                        <span class="faq__num">06</span>
+                        <span class="faq__question-text">Какие гарантии предоставляет «Центр лизинговых споров»?</span>
+                        <button type="button" class="faq__toggle" aria-label="Открыть ответ"></button>
+                    </div>
+                    <div class="faq__answer">
+                        <p>Центр лизинговых споров дает гарантию высокого качества оказываемых юридических услуг. Позиция доверителя будет строиться на самых последних разъяснениях и правовых позициях высших судебных инстанций, на самой актуальной судебной практике и действующем законодательстве. Все документы будут подготовлены максимально качественно и скрупулёзно, с учетом всех деталей и мелочей. Высокое качество правовой помощи обеспечивается многолетним опытом юридической практики каждого члена нашей команды. В любом случае до начала работы мы в полном объеме информируем клиента о перспективах и рисках его дела.</p>
+                    </div>
+                </div>
+                <div class="faq__item" data-faq>
+                    <div class="faq__question">
+                        <span class="faq__num">07</span>
+                        <span class="faq__question-text">Сколько стоят услуги Центра лизинговых споров?</span>
+                        <button type="button" class="faq__toggle" aria-label="Открыть ответ"></button>
+                    </div>
+                    <div class="faq__answer">
+                        <p>Центр лизинговых споров оказывает широкий перечень правовых услуг, начиная от разовых поручений, почасовой работы и письменных юридических консультаций, до ведения судебных дел «под ключ» и абонентского юридического обслуживания. Стоимость каждой услуги является фиксированной, зависит от сложности работы и от параметров лизинговой сделки. Все базовые ставки и тарифы на услуги в письменном виде закреплены в приказе генерального директора ООО «Центр лизинговых споров». Стоимость услуг является разумной и соразмерной важности выполняемой работы и затрачиваемому труду.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contacts">
+        <div class="container">
+            <h2 class="section-title">Связаться с нами</h2>
+            <div class="contact__wrap">
+                <form class="contact__form" id="mainForm">
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-input" placeholder="Имя *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" class="form-input" placeholder="Телефон *" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="comment" class="form-input form-input--area" placeholder="Комментарий" rows="4"></textarea>
+                    </div>
+                    <p class="contact__privacy">Отправляя данную форму, я даю согласие на обработку персональных данных</p>
+                    <button type="submit" class="btn btn--primary btn--wide">Получить консультацию</button>
+                </form>
+                <div class="contact__info">
+                    <p class="contact__address">г. Казань, Ю.Фучика 90, БЦ Франт</p>
+                    <a href="tel:+79063211157" class="contact__link">+7 (906) 321-11-57</a>
+                    <a href="mailto:info@urgrand.ru" class="contact__link">info@urgrand.ru</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__main">
+                    <div class="footer__company">
+                        <div class="footer__company-name">ЭПБ ГРАНД</div>
+                        <div class="footer__ogrn">ОГРН: 1231600049999</div>
+                        <div class="footer__address">г. Казань, Ю.Фучика 90, БЦ Франт</div>
+                        <div class="footer__contact">
+                            <a href="tel:+79063211157" class="footer__phone">+7 (906) 321-11-57</a>
+                        </div>
+                        <div class="footer__contact">
+                            <a href="mailto:info@urgrand.ru" class="footer__email">info@urgrand.ru</a>
+                        </div>
+                    </div>
+                    <div class="footer__nav">
+                        <div class="footer__nav-column">
+                            <div class="footer__nav-title">Отрасли</div>
+                            <ul class="footer__nav-list">
+                                <li><a href="https://urgrand.ru/development/" class="footer__nav-link">Девелопмент</a></li>
+                                <li><a href="https://urgrand.ru/investicii/" class="footer__nav-link">Инвестиции</a></li>
+                                <li><a href="https://urgrand.ru/informacionnye-tekhnologii/" class="footer__nav-link">Информационные технологии</a></li>
+                                <li><a href="https://urgrand.ru/agropromyshlennyj-kompleks/" class="footer__nav-link">Агропромышленный комплекс</a></li>
+                                <li><a href="https://urgrand.ru/elektronnaya-kommerciya-e-commerce/" class="footer__nav-link">Электронная коммерция (e-commerce)</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__nav-column">
+                            <div class="footer__nav-title">О компании</div>
+                            <ul class="footer__nav-list">
+                                <li><a href="https://urgrand.ru/about/" class="footer__nav-link">О компании</a></li>
+                            </ul>
+                            <div class="footer__nav-title">Практики</div>
+                            <ul class="footer__nav-list">
+                                <li><a href="https://urgrand.ru/intellektualnaya-sobstvennost/" class="footer__nav-link">Интеллектуальная собственность</a></li>
+                                <li><a href="https://urgrand.ru/sudebno-arbitrazhnaya-praktika/" class="footer__nav-link">Судебно-арбитражная практика</a></li>
+                                <li><a href="https://urgrand.ru/nedvizhimost-i-stroitelstvo/" class="footer__nav-link">Недвижимость и строительство</a></li>
+                                <li><a href="https://urgrand.ru/bankrotstvo/" class="footer__nav-link">Банкротство</a></li>
+                                <li><a href="https://urgrand.ru/zashchita-delovoj-reputacii/" class="footer__nav-link">Защита деловой репутации</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__nav-column">
+                            <div class="footer__nav-title">Блог</div>
+                            <ul class="footer__nav-list">
+                                <li><a href="https://urgrand.ru/blog/" class="footer__nav-link">Блог</a></li>
+                            </ul>
+                            <div class="footer__nav-title">Услуги</div>
+                            <ul class="footer__nav-list">
+                                <li><a href="https://urgrand.ru/%d1%8d%d0%ba%d1%81%d0%bf%d0%b5%d1%80%d1%82%d0%b8%d0%b7%d0%b0/" class="footer__nav-link">Экспертиза</a></li>
+                                <li><a href="https://urgrand.ru/%d0%ba%d1%83%d1%80%d1%81%d1%8b/" class="footer__nav-link">Курсы</a></li>
+                            </ul>
+                            <div class="footer__nav-title">Контакты</div>
+                            <ul class="footer__nav-list">
+                                <li><a href="https://urgrand.ru/kontakty/" class="footer__nav-link">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__consultation">
+                <div class="footer__consultation-content">
+                    <h3 class="footer__consultation-title">Необходима консультация специалиста?</h3>
+                    <p class="footer__consultation-text">Оставьте заявку, и наши юристы оперативно свяжутся с вами для первичной консультации.</p>
+                    <button type="button" class="btn btn--footer" onclick="document.getElementById('contacts').scrollIntoView({behavior: 'smooth'})">Отправить заявку</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
