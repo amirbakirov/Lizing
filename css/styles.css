@@ -206,7 +206,7 @@ img {
     position: relative;
     z-index: 2;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.3fr 0.7fr;
     gap: 48px;
     align-items: center;
 }
@@ -229,13 +229,13 @@ img {
 }
 
 .hero__title {
-    font-size: clamp(32px, 4vw, 48px);
+    font-size: clamp(36px, 5vw, 56px);
     font-weight: 700;
     color: var(--gold-light);
     line-height: 1.15;
     letter-spacing: -0.02em;
     margin-bottom: 28px;
-    max-width: 12ch;
+    max-width: 22ch;
 }
 
 .hero__benefits {
@@ -328,6 +328,51 @@ img {
     }
 }
 
+/* ===== Leasing Companies ===== */
+.companies {
+    padding: 40px 0;
+    background: var(--white);
+    overflow: hidden;
+}
+
+.companies__scroll {
+    display: flex;
+    gap: 40px;
+    animation: scroll 30s linear infinite;
+    width: max-content;
+}
+
+.companies__item {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    padding: 0 20px;
+}
+
+.companies__item img {
+    max-height: 50px;
+    max-width: 140px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.6);
+    transition: var(--transition);
+}
+
+.companies__item img:hover {
+    filter: grayscale(0%) opacity(1);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 /* ===== Section title ===== */
 .section-title {
     font-size: clamp(28px, 3vw, 36px);
@@ -350,40 +395,99 @@ img {
     background: var(--gray-100);
 }
 
-.about__lead {
-    font-size: 18px;
-    line-height: 1.7;
-    color: var(--gray-800);
-    margin-bottom: 20px;
+.about__grid {
+    display: grid;
+    grid-template-columns: 1fr 480px;
+    gap: 48px;
+    align-items: start;
+}
+
+.about__content {
+    padding-right: 20px;
+}
+
+.about__title {
+    margin-bottom: 24px;
 }
 
 .about__text {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.7;
     color: var(--gray-600);
-    margin-bottom: 32px;
-    max-width: 800px;
+    margin-bottom: 20px;
 }
 
-.about__specialization {
-    background: var(--white);
-    padding: 28px 32px;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    border-left: 4px solid var(--gold);
+.about__form-wrap {
+    background: var(--dark-blue);
+    padding: 36px 32px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
 }
 
-.about__specialization-title {
-    font-size: 17px;
+.about__form-title {
+    font-size: 18px;
     font-weight: 600;
-    color: var(--dark-blue);
-    margin-bottom: 12px;
+    color: var(--white);
+    line-height: 1.4;
+    margin-bottom: 24px;
 }
 
-.about__specialization-list {
-    font-size: 16px;
-    color: var(--gray-600);
-    line-height: 1.6;
+.about__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.about__input {
+    width: 100%;
+    padding: 14px 18px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    transition: var(--transition);
+}
+
+.about__input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.about__input:focus {
+    outline: none;
+    border-color: var(--gold-light);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.about__checkbox {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.about__checkbox input {
+    margin-top: 2px;
+}
+
+.about__checkbox a {
+    color: var(--gold-light);
+    text-decoration: underline;
+}
+
+.about__btn {
+    width: 100%;
+    margin-top: 8px;
+}
+
+@media (max-width: 900px) {
+    .about__grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ===== Calculator ===== */
@@ -503,6 +607,67 @@ img {
 
 .calc__btn {
     width: 100%;
+}
+
+.calc__feedback {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--gray-200);
+}
+
+.calc__feedback-text {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark-blue);
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.calc__feedback-disclaimer {
+    font-size: 13px;
+    color: var(--gray-600);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.calc__feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.calc__feedback-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    background: var(--white);
+    transition: border-color var(--transition);
+}
+
+.calc__feedback-input:focus {
+    outline: none;
+    border-color: var(--dark-blue);
+}
+
+.calc__feedback-checkbox {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--gray-600);
+    cursor: pointer;
+}
+
+.calc__feedback-checkbox input {
+    margin-top: 2px;
+}
+
+.calc__feedback-btn {
+    width: 100%;
+    margin-top: 8px;
 }
 
 @media (max-width: 900px) {

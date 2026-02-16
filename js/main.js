@@ -86,8 +86,21 @@
 
             calcResultValue.textContent = formatMoney(balance);
             calcResultValue.classList.remove('is-negative', 'is-positive');
-            if (balance < 0) calcResultValue.classList.add('is-negative');
-            else if (balance > 0) calcResultValue.classList.add('is-positive');
+            
+            var feedbackEl = document.getElementById('calc-feedback');
+            var feedbackText = document.getElementById('calc-feedback-text');
+            
+            if (balance < 0) {
+                calcResultValue.classList.add('is-negative');
+                feedbackText.textContent = 'Поможем Вам снизить требования лизинговой компании. Как правило, эта сумма значительно завышена.';
+                if (feedbackEl) feedbackEl.style.display = 'block';
+            } else if (balance > 0) {
+                calcResultValue.classList.add('is-positive');
+                feedbackText.textContent = 'Поможем Вам вернуть положительное сальдо в судебном порядке.';
+                if (feedbackEl) feedbackEl.style.display = 'block';
+            } else {
+                if (feedbackEl) feedbackEl.style.display = 'none';
+            }
         }
 
         calcSubmit.addEventListener('click', runCalc);
@@ -95,6 +108,15 @@
             el.addEventListener('input', runCalc);
             el.addEventListener('change', runCalc);
         });
+        
+        // Calculator feedback form
+        var calcFeedbackForm = document.getElementById('calc-feedback-form');
+        if (calcFeedbackForm) {
+            calcFeedbackForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Заявка отправлена. Мы свяжемся с вами в ближайшее время.');
+            });
+        }
     }
 
     // FAQ accordion
@@ -135,13 +157,15 @@
         });
     });
 
-    // Contact form submit (placeholder)
-    var form = document.getElementById('mainForm');
-    if (form) {
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            // Здесь можно подключить отправку на сервер или в CRM
-            alert('Заявка отправлена. Мы свяжемся с вами в ближайшее время.');
-        });
+    // Forms submit (placeholder)
+    var mainForm = document.getElementById('mainForm');
+    var aboutForm = document.getElementById('aboutForm');
+    
+    function handleFormSubmit(e) {
+        e.preventDefault();
+        alert('Заявка отправлена. Мы свяжемся с вами в ближайшее время.');
     }
+    
+    if (mainForm) mainForm.addEventListener('submit', handleFormSubmit);
+    if (aboutForm) aboutForm.addEventListener('submit', handleFormSubmit);
 })();
